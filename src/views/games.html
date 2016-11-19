@@ -1,24 +1,31 @@
 <!doctype html>
 <html lang="is">
+
 <head>
-  <meta charset="utf-8">
-  <title>Leikir dagsins</title>
+    <meta charset="utf-8">
+    <title>Leikir dagsins</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="src/public/stylesheets/games.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
+
 <body>
-  <h3>Allir leikir tengdir íslenskum fótbolta<h3>
+    <h1>Næstu leikir<h1>
   <table class="table">
+    <caption id="table-header">Allir leikir í boltanum á næstunni</caption>
     <thead>
       <tr>
-        <th scope="col" id="date">Dagsetning:</th>
-        <th scope="col" id="time">Tími:</th>
-        <th scope="col" id="tourny">Mót:</th>
-        <th scope="col" id="location">Staðsetning:</th>
-        <th scope="col" id="home">Heimalið:</th>
-        <th scope="col" id="away">Útilið:</th>
+        <th scope="col" id="table-date">Dagsetning:</th>
+        <th scope="col" id="table-time">Tími:</th>
+        <th scope="col" id="table-tournament">Mót:</th>
+        <th scope="col" id="table-location">Staðsetning:</th>
+        <th scope="col" id="table-home">Heimalið:</th>
+        <th scope="col" id="table-away">Útilið:</th>
       </tr>
     </thead>
     <tbody id="games">
     </tbody>
   </table>
+  <script src="src/public/javascript/games.js"></script>
 </body>
 </html>
