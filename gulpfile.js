@@ -1,18 +1,9 @@
-var gulp = require('gulp');
-var browserSync = require('browser-sync');
-
-gulp.task('serve', function() {
-    browserSync.init({
-        server: {
-            baseDir: '.'
-        }
-    });
-    gulp.watch('src/**/*.scss', ['sass']);
-    gulp.watch('src/**/*.js', ['babel']);
-    gulp.watch('./*.html').on('change', browserSync.reload);
-    gulp.watch('./*.css').on('change', browserSync.reload);
-    gulp.watch('./*.js').on('change', browserSync.reload);
-});
+const gulp = require('gulp');
+const eslint = require('gulp-eslint');
+const stylelint = require('gulp-stylelint');
+const sass = require('gulp-sass');
+const babel = require('gulp-babel');
+const browserSync = require('browser-sync');
 
 gulp.task('lint-javascript', () => {
   return gulp.src('src/**/*.js')
@@ -21,6 +12,30 @@ gulp.task('lint-javascript', () => {
   .pipe(eslint.failAfterError());
 });
 
+gulp.task('lint-scss', () => {
+  return gulp.src('src/**/*.scss')
+  .pipe(stylelint({
+    reporters: [{formatter: 'string', console: true}]
+  }));
+});
+
+gulp.task('serve', () => {
+  browserSync.init({
+    server: {
+      baseDir: '.'
+    }
+  });
+  gulp.watch('src/**/*.scss', ['sass']);
+  gulp.watch('src/**/*.js', ['babel']);
+  gulp.watch('./*.html').on('change', browserSync.reload);
+});
+
+gulp.task('sass', function () {
+  return gulp.src('src/**/*.scss')
+  .pipe(sass())
+  .pipe(gulp.dest("dist"))
+  .pipe(browserSync.stream());
+});
 
 gulp.task('babel', () => {
   return gulp.src("src/**/*.js")
@@ -29,4 +44,6 @@ gulp.task('babel', () => {
   .pipe(browserSync.stream());
 });
 
-gulp.task('default', ['serve', 'babel', 'lint-javascript']);
+gulp.task('lint', ['lint-scss', 'lint-javascript']);
+
+gulp.task('default', ['lint', 'sass', 'babel', 'serve']);
