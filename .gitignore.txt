@@ -1,2 +1,3 @@
 # Ignore application configuration
-/node_modules
+.gitignore
+node_modules
