@@ -5,7 +5,6 @@
     <meta charset="utf-8">
     <title>Spjallþráður fyrir áhugafólk um íslenkan fótbolta</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" href="src/public/stylesheets/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 
@@ -13,20 +12,34 @@
     <header>
         <nav class="header-nav">
             <ul class="nav-ul">
-                <li class="nav-li"> <a class="nav-a" href="!" title="Forsíða">Forsíða</a></li>
-                <li class="nav-li"> <a class="nav-a" href="!" title="Spjallþráður">Spjallþráður</a></li>
-                <li class="nav-li"> <a class="nav-a" href="!" title="Leikir dagsins">Leikir dagsins</a></li>
+                <li class="nav-li"> <a class="nav-a" href="./index.html" title="Forsíða">Forsíða</a></li>
+                <li class="nav-li"> <a class="nav-a" href="./forum.html" title="Spjallþráður">Spjallþráður</a></li>
+                <li class="nav-li"> <a class="nav-a" href="./games.html" title="Leikir dagsins">Leikir dagsins</a></li>
             </ul>
         </nav>
         <h2>Áhugafólk um íslenskan fótbolta</h2>
     </header>
     <main>
         <div class="latestnews">
-            <p>Nýjustu fréttir úr fótboltaheimi Íslands</p>
+          <p>Nýjustu fréttir úr fótboltaheimi Íslands</p>
+        </div>
+        <table class="table table-striped">
+            <caption id="table-header">Úrslit</caption>
+            <thead>
+              <tr>
+                <th scope="col" id="result-date">Dagsetning:</th>
+                <th scope="col" id="result-homeTeam">Heimalið:</th>
+                <th scope="col" id="result-awayTeam">Útilið:</th>
+                <th scope="col" id="result-results">Úrslit:</th>
+              </tr>
+            </thead>
+            <tbody id="results-table">
+            </tbody>
+      </table>
     </main>
     <footer>
     </footer>
-    <script src="../../../dist/public/javascript/main.js"></script>
+    <script src="./src/main.js"></script>
 </body>
 
 </html>
