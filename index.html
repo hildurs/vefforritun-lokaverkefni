@@ -5,21 +5,37 @@
     <meta charset="utf-8">
     <title>Spjallþráður fyrir áhugafólk um íslenkan fótbolta</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="dist/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 
 <body>
     <header>
-        <nav class="header-nav">
-            <ul class="nav-ul">
-                <li class="nav-li"> <a class="nav-a" href="./index.html" title="Forsíða">Forsíða</a></li>
-                <li class="nav-li"> <a class="nav-a" href="./forum.html" title="Spjallþráður">Spjallþráður</a></li>
-                <li class="nav-li"> <a class="nav-a" href="./games.html" title="Leikir dagsins">Leikir dagsins</a></li>
-            </ul>
-        </nav>
-        <h2>Áhugafólk um íslenskan fótbolta</h2>
+          <h2>Íslenski boltinn</h2>
     </header>
     <main>
+      <div class="col-sm-3">
+        <div class="sidebar-nav">
+          <div class="navbar navbar-default" role="navigation">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <span class="visible-xs navbar-brand">Sidebar menu</span>
+            </div>
+            <div class="navbar-collapse collapse sidebar-navbar-collapse">
+              <ul class="nav navbar-nav">
+                <li class="nav-link"><a href="index.html">Forsíða</a></li>
+                <li class="nav-link"><a href="forum.html">Spjallþráður</a></li>
+                <li class="nav-link"><a href="games.html">Leikir á dagskrá</a></li>
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div>
+        </div>
+      </div>
         <div class="latestnews">
           <p>Nýjustu fréttir úr fótboltaheimi Íslands</p>
         </div>
