@@ -70,4 +70,3 @@ header {
   border: 1px solid #E3CDB1; }
 
 .table-striped > tbody > tr:nth-child(2n) > td, .table-striped > tbody > tr:nth-child(2n) > th {
-  background-color: #98FB98; }
