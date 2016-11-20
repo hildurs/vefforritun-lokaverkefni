@@ -1,0 +1,39 @@
+
+
+h1 {
+  color: black;
+  font-weight: bold;
+  padding-left: 40%;
+  text-align: center;
+}
+.container {
+  flex-wrap: wrap;
+}
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 3%;
+  width: 100%;
+}
+.site-header-buttons {
+  padding-left: 30%;
+  padding-top: 2%;
+
+}
+.panel-heading {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.panel-heading h3 {
+  margin: auto;
+}
+
+.panel-heading button {
+  background: transparent;
+  border: none;
+  height: 5%;
+  margin: auto;
+}
