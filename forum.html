@@ -1,81 +1,80 @@
 <!doctype html>
 <html lang="is">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Umræða</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  </head>
-  <body>
-    <main class="container">
-      <h1>Umræðuefni</h1>
-      <hr>
-      <section class="entries">
-        <div class="entry-node">
-        <div class="row">
-          <div class="col-xs-12">
-            <h2>Herra Ipsum</h2>
-            <p>Lorem ipsum dolor sit amet...</p>
-          </div>
-        </div>
-        <div class="replies-node">
-          <div class="row">
-            <div class="col-xs-12">
-              <div class="panel panel-info">
-                <div class="panel-heading">
-                  <h3 class="panel-title">Frú Rutrum</h3>
-                </div>
-                <div class="panel-body">Svar frá frú Rutrum</div>
-              </div>
-            </div>
-          </div>
-        </div><!doctype html>
-<html lang="is">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Umræða</title>
+    <title>Umærðan</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="dist/forum.css">
 </head>
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Forsíða</a></li>
+            <li><a href="forum.html">Umræðan</a></li>
+            <li><a href="games.html">Leikir dagsins</a></li>
+            <li><a href="topic.html">Færsla</a></li>
+        </ul>
+    </nav>
+</header>
 
 <body>
     <main class="container">
-        <h1>Umræðuefni></h1>
-        <hr>
+        <div class="site-header">
+            <h1>Umræðan</h1>
+            <div class="site-header-buttons">
+            <button type="button" class="btn btn-default btn-sm">
+          <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Leita
+        </button>
+            <button type="button" class="btn btn-default btn-sm">
+          <span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> Nýr þráður
+        </button>
+      </div>
+            <hr>
+        </div>
         <section class="entries">
+
             <div class="entry-node">
                 <div class="row">
                     <div class="col-xs-12">
-                        <h2>Herra Ipsum</h2>
-                        <p>Lorem ipsum dolor sit amet...</p>
+                        <div class="panel panel-success">
+                            <div class="panel-heading">
+                                <h3 class="panel-topic">Hvaða leikmann ætti Liverpool að kaupa?</h3>
+                                <h3 class="panel-name">Palli</h3>
+                                <h3 class="panel-date"> 22.11.2016</h3>
+                                <button type="button" class="btn btn-default btn-sm">
+                                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span>
+                                </button>
+                            </div>
+                            <div class="panel-body">
+                                <p class="text">Þeir þurfa eitthvað að fara að gera í sínum málum</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="replies-node">
                     <div class="row">
                         <div class="col-xs-12">
-                            <div class="panel panel-info">
-                                <div class="panel-heading">
-                                    <h3 class="panel-title">Frú Rutrum</h3>
-                                </div>
-                                <div class="panel-body">Svar frá frú Rutrum</div>
-                            </div>
+                            <h4 class="name">Kalli</h4>
+                            <p class="text">Ronaldo</p>
                         </div>
                     </div>
                 </div>
+                <form class="form-inline reply-form">
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="name" placeholder="Nafn">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="text" placeholder="Svar">
+                    </div>
+                    <button type="submit" class="btn btn-default btn-sm"> Svara </button>
+                </form>
             </div>
+            <hr>
         </section>
-        <h2>Ný færsla</h2>
-        <form id="new-entry">
-            <label for="new-entry-name">Nafn</label>
-            <input type="text" class="form-control" id="new-entry-name" name="name" placeholder="Skrifaðu nafn hér" autocomplete="off" />
-            <label for="new-entry-text">Texti</label>
-            <textarea autocomplete="off" rows="5" id="new-entry-text" name="text" class="form-control" placeholder="Skrifaðu texta hér"></textarea>
-            <button class="btn btn-primary"><i class="glyphicon glyphicon-pencil"></i> Skrifa</button>
-        </form>
-        <div class="col-md-3">
-            <p><small>Fjöldi stafa <span class="char-count"> 0 </span> af hámarksfjölda 1000</small></p>
-        </div>
     </main>
-    <script src="src/public/javascript/forum.js"></script>
+    <script src="dist/forum.js"></script>
 </body>
+
+</html>

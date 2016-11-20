@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="is">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nýr þráður</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="dist/topic.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Forsíða</a></li>
+                <li><a href="forum.html">Umræðan</a></li>
+                <li><a href="games.html">Leikir dagsins</a></li>
+                <li><a href="topic.html">Færsla</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h2>Nýr þráður</h2>
+        <form id="new-entry">
+            <div class="form-group">
+                <label for="new-entry-name">Nafn</label>
+                <input type="text" class="form-control" id="new-entry-name" name="name" placeholder="Skrifaðu nafn hér" autocomplete="off" />
+            </div>
+            <div class="form-group">
+                <label for="new-entry-text">Texti</label>
+                <textarea autocomplete="off" rows="5" id="new-entry-text" name="text" class="form-control" placeholder="Skrifaðu texta hér"></textarea>
+            </div>
+            <button class="btn btn-primary"><i class="glyphicon glyphicon-ok"></i>Vista</button>
+        </form>
+        <div class="col-md-3">
+            <p><small>Fjöldi stafa <span class="char-count"> 0 </span> af hámarksfjölda 1000</small></p>
+        </div>
+    </main>
+    <script src="dist/topic.js"></script>
+</body>
