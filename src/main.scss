@@ -55,7 +55,11 @@ header  {
 }
 
 .col-sm-3 {
-  width: 20%;
+  width: 15%;
+}
+
+.navbar  {
+  border: 0.0625rem solid #C7BBBB;
 }
 
 .nav-link{
@@ -74,4 +78,28 @@ header  {
 
 .table-striped > tbody > tr:nth-child(2n) > td, .table-striped > tbody > tr:nth-child(2n) > th {
    background-color: #a0db8e;
+ }
+
+ footer  {
+   background: #C7BBBB;
+   min-height: 10vh;
+ }
+
+ .fb-share-button  {
+
+   }
+
+ .footer-container {
+     display: flex;
+     justify-content: center;
+   }
+
+   .social-link  {
+     margin-top: 2rem;
+     display: flex;
+   }
+
+ .fb-share-button  {
+   margin-right: 1rem;
+   margin-top: -0.3rem;
  }
